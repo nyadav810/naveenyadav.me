@@ -6,7 +6,7 @@ import { PREVIOUS_EMPLOYERS, PROFICIENCIES, SKILLS, SOCIALS } from './constants'
 const Header = () => (
   <div className="space-y-3 border-b-2 pb-4 mr-4">
     <h1 className="text-6xl">{strings.title}</h1>
-    <h2 className="text-3xl text-gray-300 font-light">{strings.subtitle}</h2>
+    <h2 className="text-3xl text-gray-400 font-light">{strings.subtitle}</h2>
     <div className="flex flex-row space-x-4">
       {SOCIALS.map(({ name, displayName, url }) => (
         <a
@@ -34,7 +34,7 @@ const ProfileIcon = () => (
 
 const List = ({ title, list }: { title: string; list: string[] }) => (
   <div className="basis-1/3">
-    <h4 className="font-bold mb-2">{title}</h4>
+    <h3 className="font-bold mb-2">{title}</h3>
     <ul className="list-disc pl-4">
       {list.map((entry) => (
         <li className="mb-2" key={entry}>
