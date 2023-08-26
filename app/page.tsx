@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import strings from './en.json'
 import { PREVIOUS_EMPLOYERS, PROFICIENCIES, SKILLS, SOCIALS } from './constants'
 
