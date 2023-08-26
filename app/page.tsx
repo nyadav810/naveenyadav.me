@@ -23,13 +23,13 @@ const Header = () => (
 )
 
 const ProfileIcon = () => (
-  <Image
+  <img
     className="self-end rounded-full"
     src="https://s3.us-west-2.amazonaws.com/naveenyadav.me/naveen_in_barcelona.png"
     alt="Naveen in Barcelona"
     height={400}
     width={400}
-  ></Image>
+  ></img>
 )
 
 const List = ({ title, list }: { title: string; list: string[] }) => (
