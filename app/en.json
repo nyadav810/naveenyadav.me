@@ -7,6 +7,8 @@
   "proficiencies": "Proficiencies",
   "contact": "Contact me",
   "name": "Name",
+  "email": "E-mail",
+  "message": "Message",
   "github": "Github",
   "linkedin": "LinkedIn"
 }

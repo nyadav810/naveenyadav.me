@@ -1,8 +1,10 @@
-import Header from 'app/components/Header'
-import List from 'app/components/List'
-import ProfileIcon from 'app/components/ProfileIcon'
 import { PREVIOUS_EMPLOYERS, PROFICIENCIES, SKILLS } from 'app/constants'
 import strings from 'app/en.json'
+
+import ContactForm from '@/components/ContactForm'
+import Header from '@/components/Header'
+import List from '@/components/List'
+import ProfileIcon from '@/components/ProfileIcon'
 
 const Home = () => (
   <main className="min-h-screen p-8 md:p-0 md:pt-24">
@@ -17,7 +19,7 @@ const Home = () => (
       </div>
       <ProfileIcon />
     </div>
-    {/** TODO: Add Contact Form */}
+    <ContactForm />
   </main>
 )
 
