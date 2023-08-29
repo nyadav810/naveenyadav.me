@@ -1,4 +1,4 @@
-import strings from './en.json'
+import strings from 'app/en.json'
 
 export const SOCIALS: {
   name: string
