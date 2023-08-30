@@ -32,6 +32,14 @@
         }
       ]
     },
+    "AMPLIFY_function_fwdContactFormLambda_fwdContactSnsTopicArn": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "fwdContactFormLambda"
+        }
+      ]
+    },
     "AMPLIFY_function_fwdContactFormLambda_s3Key": {
       "usedBy": [
         {
