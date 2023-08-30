@@ -48,7 +48,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>{strings.name}</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input autoComplete="name" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -61,7 +61,7 @@ const ContactForm = () => {
               <FormItem>
                 <FormLabel>{strings.email}</FormLabel>
                 <FormControl>
-                  <Input type="email" {...field} />
+                  <Input type="email" autoComplete="email" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
