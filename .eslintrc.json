@@ -5,6 +5,7 @@
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "ignorePatterns": ["amplify/*"],
   "rules": {
     // increase the severity of rules so they are auto-fixable
     "simple-import-sort/imports": "error",

@@ -1,0 +1,26 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyb026613920884-staging-02213-authRole",
+      "UnauthRoleArn": "arn:aws:iam::984139908672:role/amplify-amplifyb026613920884-staging-02213-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::984139908672:role/amplify-amplifyb026613920884-staging-02213-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplifyb026613920884-staging-02213-deployment",
+      "UnauthRoleName": "amplify-amplifyb026613920884-staging-02213-unauthRole",
+      "StackName": "amplify-amplifyb026613920884-staging-02213",
+      "StackId": "arn:aws:cloudformation:us-east-1:984139908672:stack/amplify-amplifyb026613920884-staging-02213/449eb060-46cb-11ee-924b-12b93046038d",
+      "AmplifyAppId": "de5njorhu5ewq"
+    },
+    "categories": {
+      "function": {
+        "fwdContactFormLambda": {
+          "deploymentBucketName": "amplify-amplifyb026613920884-staging-02213-deployment",
+          "s3Key": "amplify-builds/fwdContactFormLambda-6d2b746e7a3852726647-build.zip"
+        }
+      },
+      "api": {
+        "contactFormAPI": {}
+      }
+    }
+  }
+}
