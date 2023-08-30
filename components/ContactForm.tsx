@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import strings from 'app/en.json'
 import * as z from 'zod'
 
+import { submitContactForm } from '@/api/contactForm'
 import { Button } from '@/components/ui/button'
 import {
   Form,
@@ -39,8 +40,10 @@ const ContactForm = () => {
     },
   })
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    console.log(values)
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    const response = await submitContactForm(values)
+
+    console.log(response)
   }
 
   return (
