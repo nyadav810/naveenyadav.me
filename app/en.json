@@ -1,6 +1,8 @@
 {
   "title": "Naveen Yadav",
   "subtitle": "Software Engineer For Hire",
+  "github": "Github",
+  "linkedin": "LinkedIn",
   "description": "Hi, my name is Naveen. I'm an independent Software Engineer specializing in all stages of web application development.",
   "previousEmployment": "Previous Employers",
   "skills": "Skills",
@@ -9,6 +11,8 @@
   "name": "Name",
   "email": "E-mail",
   "message": "Message",
-  "github": "Github",
-  "linkedin": "LinkedIn"
+  "nameMinLength": "Please enter a name that is at least 3 characters",
+  "nameMaxLength": "Please enter a name that is at most 70 characters",
+  "contactMessageMinLength": "Please enter a message that is at least 20 characters",
+  "contactMessageMaxLength": "Please enter a message that is at most 1000 characters"
 }

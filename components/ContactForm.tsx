@@ -18,9 +18,15 @@ import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 
 const formSchema = z.object({
-  name: z.string().min(2).max(50),
+  name: z
+    .string()
+    .min(3, { message: strings.nameMinLength })
+    .max(70, { message: strings.nameMaxLength }),
   email: z.string().email(),
-  message: z.string().min(10).max(500),
+  message: z
+    .string()
+    .min(20, { message: strings.contactMessageMinLength })
+    .max(1000, { message: strings.contactMessageMaxLength }),
 })
 
 const ContactForm = () => {
@@ -29,6 +35,7 @@ const ContactForm = () => {
     defaultValues: {
       name: '',
       email: '',
+      message: '',
     },
   })
 
@@ -76,8 +83,7 @@ const ContactForm = () => {
                 <FormControl>
                   <Textarea
                     placeholder="Type your message here"
-                    className="resize-none"
-                    rows={3}
+                    rows={4}
                     {...field}
                   />
                 </FormControl>
