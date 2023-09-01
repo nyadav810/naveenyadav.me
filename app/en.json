@@ -17,5 +17,6 @@
   "contactMessageMaxLength": "Please enter a message that is at most 1000 characters",
   "messageSent": "Thank you! Your message has been sent.",
   "submit": "Submit",
-  "sending": "Sending"
+  "sending": "Sending",
+  "somethingWentWrong": "Something went wrong. Please try again later!"
 }

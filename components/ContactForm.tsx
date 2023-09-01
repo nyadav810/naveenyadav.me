@@ -41,6 +41,7 @@ const defaultValues = {
 const ContactForm = () => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -49,14 +50,23 @@ const ContactForm = () => {
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setLoading(true)
-    const { message } = await submitContactForm(values)
+    setError(false)
+    setSuccess(false)
 
-    if (message === 'Success') {
-      setSuccess(true)
-      form.reset({ ...defaultValues })
+    try {
+      const { message } = await submitContactForm(values)
+
+      if (message === 'Success') {
+        setSuccess(true)
+        form.reset({ ...defaultValues })
+      } else {
+        setError(true)
+      }
+    } catch (error) {
+      setError(true)
+    } finally {
+      setLoading(false)
     }
-
-    setLoading(false)
   }
 
   return (
@@ -116,6 +126,9 @@ const ContactForm = () => {
               </Button>
             )}
             {success && <p>{strings.messageSent}</p>}
+            {error && (
+              <p className="text-red-700">{strings.somethingWentWrong}</p>
+            )}
           </div>
         </form>
       </Form>
