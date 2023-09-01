@@ -14,5 +14,8 @@
   "nameMinLength": "Please enter a name that is at least 3 characters",
   "nameMaxLength": "Please enter a name that is at most 70 characters",
   "contactMessageMinLength": "Please enter a message that is at least 20 characters",
-  "contactMessageMaxLength": "Please enter a message that is at most 1000 characters"
+  "contactMessageMaxLength": "Please enter a message that is at most 1000 characters",
+  "messageSent": "Thank you! Your message has been sent.",
+  "submit": "Submit",
+  "sending": "Sending"
 }

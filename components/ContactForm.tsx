@@ -1,8 +1,10 @@
 'use client'
 
+import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import strings from 'app/en.json'
+import { Loader2 } from 'lucide-react'
 import * as z from 'zod'
 
 import { submitContactForm } from '@/api/contactForm'
@@ -30,24 +32,35 @@ const formSchema = z.object({
     .max(1000, { message: strings.contactMessageMaxLength }),
 })
 
+const defaultValues = {
+  name: '',
+  email: '',
+  message: '',
+}
+
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
+
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
+    defaultValues,
   })
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    const response = await submitContactForm(values)
+    setLoading(true)
+    const { message } = await submitContactForm(values)
 
-    console.log(response)
+    if (message === 'Success') {
+      setSuccess(true)
+      form.reset({ ...defaultValues })
+    }
+
+    setLoading(false)
   }
 
   return (
-    <div className="md:w-1/2 mt-4">
+    <div className="md:w-1/2 py-4">
       <h3 className="text-2xl font-bold mb-4">{strings.contact}</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -94,7 +107,16 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          <Button type="submit">Submit</Button>
+          <div className="flex space-x-4 items-center">
+            {!loading && <Button type="submit">{strings.submit}</Button>}
+            {loading && (
+              <Button disabled>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                {strings.sending}
+              </Button>
+            )}
+            {success && <p>{strings.messageSent}</p>}
+          </div>
         </form>
       </Form>
     </div>
