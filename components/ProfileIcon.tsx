@@ -11,6 +11,7 @@ const ProfileIcon = () => (
       alt="Naveen in Barcelona"
       height={400}
       width={400}
+      fetchPriority="high"
     />
   </picture>
 )
