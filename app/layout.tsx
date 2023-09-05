@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Naveen Yadav - Software Engineer For Hire',
   description:
     'Ex-Amazon Software Engineer for hire, specializing in web app development.',
+  alternates: {
+    canonical: 'https://naveenyadav.me',
+  },
 }
 
 export default function RootLayout({
