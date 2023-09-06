@@ -16,26 +16,3 @@ export const SOCIALS: {
     url: 'https://github.com/nyadav810',
   },
 ]
-
-export const PREVIOUS_EMPLOYERS = [
-  'Cruise',
-  'Amazon Web Services',
-  'Groupon',
-  'Liberty Mutual Insurance',
-]
-
-export const SKILLS = [
-  'Full stack web development',
-  'Cloud development',
-  'Project management',
-  'Technical design',
-]
-
-export const PROFICIENCIES = [
-  'React',
-  'JavaScript',
-  'TypeScript',
-  'HTML',
-  'CSS',
-  'AWS',
-]
