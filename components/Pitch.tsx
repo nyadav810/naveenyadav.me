@@ -1,7 +1,7 @@
 import Emoji from '@/components/ui/emoji'
 
 const Pitch = () => (
-  <section className="text-xl md:text-sm pb-4 mr-4 space-y-4">
+  <section className="md:max-w-prose pb-4 space-y-4">
     <p>
       <Emoji symbol="👋" label="wave" /> <b>Hello there! I&apos;m Naveen.</b>
     </p>
@@ -21,8 +21,8 @@ const Pitch = () => (
       your service.
     </p>
     <p>
-      I&apos;m excited to help you achieve your dreams! Use the form below to
-      send me a message!
+      I&apos;m excited to meet and work with you! Use the form below to send me
+      a <Emoji symbol="✉️" label="message" />!
     </p>
   </section>
 )
