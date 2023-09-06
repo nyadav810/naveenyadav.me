@@ -117,7 +117,7 @@ const ContactForm = () => {
               </FormItem>
             )}
           />
-          <div className="flex space-x-4 items-center">
+          <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0 md:items-center">
             {!loading && <Button type="submit">{strings.submit}</Button>}
             {loading && (
               <Button disabled>
