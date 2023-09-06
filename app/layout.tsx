@@ -5,10 +5,9 @@ import 'app/globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-const title =
-  'Freelance Software Developer | TypeScript, React, AWS | Naveen Yadav'
+const title = 'Freelance Software Developer | Naveen Yadav'
 const description =
-  'Freelance Software Developer with 9 years of experience. Use my expertise to supercharge your online business and customer experience.'
+  'I specialize in building web apps using TypeScript, React, and AWS. I have 9 years of software industry experience. Use my expertise to supercharge your online business and customer experience.'
 
 export const metadata: Metadata = {
   title,
