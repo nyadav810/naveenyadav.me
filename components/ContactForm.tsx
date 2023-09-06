@@ -71,7 +71,7 @@ const ContactForm = () => {
 
   return (
     <div className="md:w-1/2 py-4">
-      <h3 className="text-2xl font-bold mb-4">{strings.contact}</h3>
+      <h3 className="font-bold mb-4">{strings.contact}</h3>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
