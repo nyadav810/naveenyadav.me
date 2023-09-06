@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     url: 'https://naveenyadav.me',
-    title: 'naveenyadav.me',
+    title,
     description,
     images: [
       {
