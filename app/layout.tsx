@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description,
     images: [
       {
-        url: 'https://s3.us-west-2.amazonaws.com/naveenyadav.me/naveen_in_barcelona.png',
+        url: 'https://d3lhhs2b8t5fnk.cloudfront.net/naveen_in_barcelona.png',
       },
     ],
   },
