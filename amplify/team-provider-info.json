@@ -15,7 +15,7 @@
       "function": {
         "fwdContactFormLambda": {
           "deploymentBucketName": "amplify-amplifyb026613920884-staging-02213-deployment",
-          "s3Key": "amplify-builds/fwdContactFormLambda-4a5565344e7951747154-build.zip",
+          "s3Key": "amplify-builds/fwdContactFormLambda-2f303441456979304737-build.zip",
           "fwdContactSnsTopicArn": "arn:aws:sns:us-east-1:984139908672:sns-topic-fwdContactForm-staging"
         }
       },

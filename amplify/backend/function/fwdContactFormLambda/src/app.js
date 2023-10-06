@@ -10,6 +10,7 @@ See the License for the specific language governing permissions and limitations 
 */
 
 const { SNSClient, PublishCommand } = require('@aws-sdk/client-sns')
+const AWSXRay = require('aws-xray-sdk')
 const express = require('express')
 const bodyParser = require('body-parser')
 const awsServerlessExpressMiddleware = require('aws-serverless-express/middleware')
@@ -26,7 +27,9 @@ app.use(function (req, res, next) {
   next()
 })
 
-const client = new SNSClient({ region: process.env.REGION })
+const sns = AWSXRay.captureAWSv3Client(
+  new SNSClient({ region: process.env.REGION })
+)
 
 app.post('/contact', async function (req, res) {
   if (!req.body.name || !req.body.email || !req.body.message) {
@@ -42,7 +45,7 @@ app.post('/contact', async function (req, res) {
   })
 
   try {
-    const data = await client.send(command)
+    const data = await sns.send(command)
 
     console.log(data)
 
