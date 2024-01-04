@@ -5,7 +5,7 @@ import 'app/globals.css'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 
-const title = 'Freelance Software Developer | Naveen Yadav'
+const title = 'Senior Software Engineer | Naveen Yadav'
 const description =
   'I specialize in building web apps using TypeScript, React, and AWS. I have 9 years of software industry experience. Use my expertise to supercharge your online business and customer experience.'
 

@@ -6,13 +6,10 @@ const Pitch = () => (
       <Emoji symbol="👋" label="wave" /> <b>Hello there! I&apos;m Naveen.</b>
     </p>
     <p>
-      I&apos;m a Senior Software Engineer turned freelancer. I&apos;m passionate
-      about building delightful and performant web apps (<b>TypeScript</b> and{' '}
-      <b>React</b> are my <Emoji symbol="🍞" label="bread" /> and{' '}
-      <Emoji symbol="🧈" label="butter" />
-      ), and architecting serverless applications in the cloud (<b>AWS</b> is my
-      go-to <Emoji symbol="☁️" label="cloud" />
-      ).
+      I&apos;m passionate about architecting, developing, testing and deploying
+      high-performance web apps (<b>React</b>, <b>TypeScript</b>, and <b>AWS</b>{' '}
+      are my favorite tools). I&apos;m looking for new opportunities following a
+      career break that started in August 2023.
     </p>
     <p>
       Whether you need help launching a website, measuring success metrics, or
