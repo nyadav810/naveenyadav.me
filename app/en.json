@@ -6,6 +6,7 @@
   "contact": "Contact me",
   "name": "Name",
   "email": "E-mail",
+  "emailInvalid": "Please enter a valid e-mail address",
   "message": "Message",
   "nameMinLength": "Please enter a name that is at least 3 characters",
   "nameMaxLength": "Please enter a name that is at most 70 characters",

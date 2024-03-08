@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import strings from 'app/en.json'
@@ -25,7 +25,7 @@ const formSchema = z.object({
     .string()
     .min(3, { message: strings.nameMinLength })
     .max(70, { message: strings.nameMaxLength }),
-  email: z.string().email(),
+  email: z.string().email({ message: strings.emailInvalid }),
   message: z
     .string()
     .min(20, { message: strings.contactMessageMinLength })
@@ -38,7 +38,13 @@ const defaultValues = {
   message: '',
 }
 
-const ContactForm = () => {
+type Props = {
+  submit: typeof submitContactForm
+}
+
+const ContactForm: React.FC<Props> = ({
+  submit = submitContactForm,
+}: Props) => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
@@ -54,7 +60,7 @@ const ContactForm = () => {
     setSuccess(false)
 
     try {
-      const { message } = await submitContactForm(values)
+      const { message } = await submit(values)
 
       if (message === 'Success') {
         setSuccess(true)
