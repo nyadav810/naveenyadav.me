@@ -39,7 +39,7 @@ const defaultValues = {
 }
 
 type Props = {
-  submit: typeof submitContactForm
+  submit?: typeof submitContactForm
 }
 
 const ContactForm: React.FC<Props> = ({
