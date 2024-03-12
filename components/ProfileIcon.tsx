@@ -5,7 +5,7 @@ const ProfileIcon = () => (
       type="image/webp"
     />
     <img
-      className="self-end rounded-full mx-auto md:max-w-fit"
+      className="self-end rounded-full mx-auto md:max-w-fit animate-fade-in"
       src="https://d3lhhs2b8t5fnk.cloudfront.net/naveen_in_barcelona.png"
       alt="Naveen in Barcelona"
       height={400}
