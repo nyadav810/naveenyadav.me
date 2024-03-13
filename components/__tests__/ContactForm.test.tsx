@@ -93,7 +93,7 @@ describe('ContactForm', () => {
     expect(getMessageTextareaElement()).toHaveValue(message)
   })
 
-  it('should display confirmation message when submitted values are valid', async () => {
+  it('should display confirmation message when submitted values are valid and clear when re-submitted with invalid values', async () => {
     const { user } = setup(<ContactForm submit={mockSubmit} />)
 
     const name = 'a'.repeat(10)
@@ -118,5 +118,9 @@ describe('ContactForm', () => {
     expect(getNameInputElement()).toHaveValue('')
     expect(getEmailInputElement()).toHaveValue('')
     expect(getMessageTextareaElement()).toHaveValue('')
+
+    await user.click(getSubmitButton())
+
+    expect(screen.queryByText(strings.messageSent)).not.toBeInTheDocument()
   })
 })

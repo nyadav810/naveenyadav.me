@@ -54,7 +54,7 @@ const ContactForm: React.FC<Props> = ({
     defaultValues,
   })
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onValid = async (values: z.infer<typeof formSchema>) => {
     setLoading(true)
     setError(false)
     setSuccess(false)
@@ -75,11 +75,19 @@ const ContactForm: React.FC<Props> = ({
     }
   }
 
+  const onInvalid = () => {
+    setLoading(false)
+    setSuccess(false)
+  }
+
   return (
     <div className="md:w-1/2 py-4">
       <h3 className="font-bold mb-4">{strings.contact}</h3>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
+        <form
+          onSubmit={form.handleSubmit(onValid, onInvalid)}
+          className="space-y-4"
+        >
           <FormField
             control={form.control}
             name="name"
