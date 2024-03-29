@@ -42,9 +42,7 @@ type Props = {
   submit?: typeof submitContactForm
 }
 
-const ContactForm: React.FC<Props> = ({
-  submit = submitContactForm,
-}: Props) => {
+const ContactForm = ({ submit = submitContactForm }: Props) => {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [error, setError] = useState(false)
