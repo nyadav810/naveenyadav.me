@@ -1,8 +1,8 @@
 {
   "title": "Naveen Yadav",
   "subtitle": "Senior Software Engineer",
-  "github": "Github",
-  "linkedin": "LinkedIn",
+  "githubLinkA11yText": "Link to Naveen's Github profile",
+  "linkedinLinkA11yText": "Link to Naveen's LinkedIn profile",
   "contact": "Contact me",
   "name": "Name",
   "email": "E-mail",
