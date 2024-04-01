@@ -3,16 +3,12 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import strings from 'app/en.json'
 
-import '@testing-library/jest-dom'
-
 import ContactForm from '../ContactForm'
 
-function setup(component: React.ReactNode) {
-  return {
-    user: userEvent.setup(),
-    ...render(component),
-  }
-}
+const setup = (component: React.ReactElement) => ({
+  user: userEvent.setup(),
+  ...render(component),
+})
 
 const mockSubmit = jest.fn().mockResolvedValue({ message: 'Success' })
 const mockSubmitWithRejection = jest.fn().mockRejectedValue(new Error('uh oh'))
