@@ -7,13 +7,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import { cn } from '@/lib/utils'
 
 const SOCIALS: {
   name: string
   hoverText: string
   a11yText: string
   url: string
-  bgColor: string
+  bgColorClassName: string
   icon: LucideIcon
   iconProps: LucideProps
 }[] = [
@@ -22,7 +23,7 @@ const SOCIALS: {
     hoverText: strings.linkedin,
     a11yText: strings.linkedinLinkA11yText,
     url: 'https://www.linkedin.com/in/naveen-yadav8000',
-    bgColor: '#0a66c2',
+    bgColorClassName: 'bg-[#0a66c2]',
     icon: Linkedin,
     iconProps: {
       color: '#fff',
@@ -33,7 +34,7 @@ const SOCIALS: {
     hoverText: strings.github,
     a11yText: strings.githubLinkA11yText,
     url: 'https://github.com/nyadav810',
-    bgColor: '#333',
+    bgColorClassName: 'bg-[#333333]',
     icon: Github,
     iconProps: {
       color: '#fff',
@@ -51,7 +52,7 @@ const Header = () => (
           name,
           hoverText,
           a11yText,
-          bgColor,
+          bgColorClassName,
           icon: Icon,
           url,
           iconProps,
@@ -60,10 +61,10 @@ const Header = () => (
             <Tooltip>
               <TooltipTrigger asChild>
                 <span
-                  className={
-                    'border-2 p-2.5 md:p-1 rounded-full hover:opacity-75'
-                  }
-                  style={{ backgroundColor: bgColor }}
+                  className={cn(
+                    'border-2 p-2.5 md:p-1 rounded-full hover:opacity-75',
+                    bgColorClassName
+                  )}
                 >
                   <a aria-label={a11yText} href={url} target="_blank">
                     <Icon {...iconProps} />
