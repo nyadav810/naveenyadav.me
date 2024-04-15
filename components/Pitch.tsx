@@ -7,15 +7,13 @@ const Pitch = () => (
     </p>
     <p>
       I&apos;m passionate about architecting, developing, testing and deploying
-      high-performance web apps (<b>React</b>, <b>TypeScript</b>, and <b>AWS</b>{' '}
-      are my favorite tools). I&apos;m looking for new opportunities following a
-      career break that started in August 2023.
+      delightfully usable, modern web apps (<b>React</b>, <b>TypeScript</b>, and{' '}
+      <b>AWS</b> are my favorite tools).
     </p>
     <p>
       Whether you need help launching a website, measuring success metrics, or
       fixing a production outage, my <b>9 years of experience</b> at world-class
-      software organizations (Amazon Web Services, GM Cruise, Groupon) are at
-      your service.
+      software organizations are at your service.
     </p>
     <p>
       I&apos;m excited to meet and work with you! Use the form below to send me

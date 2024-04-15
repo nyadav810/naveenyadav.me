@@ -17,5 +17,10 @@
   "messageSent": "Thank you! Your message has been sent.",
   "submit": "Submit",
   "sending": "Sending",
-  "somethingWentWrong": "Something went wrong. Please try again later!"
+  "somethingWentWrong": "Something went wrong. Please try again later!",
+  "workExperience": "Work Experience",
+  "cruiseDescription": "I worked on the Remote Assistance team as a Frontend-focused Full Stack engineer. The Remote Assistance web app enables human operators to assist Cruise's autonomous vehicles out of difficult situations.",
+  "amazonDescription": "I was a member of the EC2 Console Frontend team, responsible for maintaining and launching new features for various services within the AWS Management Console.",
+  "grouponDescription": "I worked on the Things To Do Frontend team, maintaining and improving the customer experience for booking tickets for events on Groupon.com.",
+  "libertyDescription": "I worked in the IT Department on internal software applications for Claims, Umbrella insurance and Quoting/Billing."
 }

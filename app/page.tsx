@@ -2,6 +2,7 @@ import ContactForm from '@/components/ContactForm'
 import Header from '@/components/Header'
 import Pitch from '@/components/Pitch'
 import ProfileIcon from '@/components/ProfileIcon'
+import Timeline from '@/components/Timeline'
 
 const Home = () => (
   <main className="min-h-screen p-8 md:p-0 md:pt-12">
@@ -12,6 +13,7 @@ const Home = () => (
       </div>
       <ProfileIcon />
     </div>
+    <Timeline />
     <ContactForm />
   </main>
 )

@@ -9,6 +9,7 @@ import * as z from 'zod'
 
 import { submitContactForm } from '@/api/contactForm'
 import { Button } from '@/components/ui/button'
+import Emoji from '@/components/ui/emoji'
 import {
   Form,
   FormControl,
@@ -80,7 +81,9 @@ const ContactForm = ({ submit = submitContactForm }: Props) => {
 
   return (
     <div className="md:w-1/2 py-4">
-      <h3 className="font-bold mb-4">{strings.contact}</h3>
+      <h3 className="mb-4">
+        <Emoji symbol="✉️" label="message" /> {strings.contact}
+      </h3>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onValid, onInvalid)}
