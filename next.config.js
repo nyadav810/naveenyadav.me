@@ -7,7 +7,7 @@ const withBundleAnalyzer = bundleAnalyzer({
 const cspHeader = `
     default-src 'self';
     script-src 'self' 'unsafe-eval' 'unsafe-inline';
-    style-src 'self' 'unsafe-inline';
+    style-src 'self';
     img-src 'self' https://d3lhhs2b8t5fnk.cloudfront.net blob: data:;
     font-src 'self';
     object-src 'none';
